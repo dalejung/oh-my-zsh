@@ -487,15 +487,15 @@ __git_complete_revlist_file ()
 	*...*)
 		pfx="${cur_%...*}..."
 		cur_="${cur_#*...}"
-		__gitcomp_nl "$(__git_refs)" "$pfx" "$cur_"
+		__gitcomp_nl "$(__git_heads)" "$pfx" "$cur_"
 		;;
 	*..*)
 		pfx="${cur_%..*}.."
 		cur_="${cur_#*..}"
-		__gitcomp_nl "$(__git_refs)" "$pfx" "$cur_"
+		__gitcomp_nl "$(__git_heads)" "$pfx" "$cur_"
 		;;
 	*)
-		__gitcomp_nl "$(__git_refs)"
+		__gitcomp_nl "$(__git_heads)"
 		;;
 	esac
 }
